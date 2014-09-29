@@ -21,7 +21,7 @@ public:
 	TextField();
 	TextField(String designator, String value);
 	virtual ~TextField();
-	String getValue();
+	String value();
 	void setValue(String value);
 	int size();
 	void display(ostream& s);
@@ -39,7 +39,7 @@ TextField::~TextField()
 {
 	//Do nothing
 } //end ~TextField
-String TextField::getValue()
+String TextField::value()
 {
 	return _value;
 }//end getalue

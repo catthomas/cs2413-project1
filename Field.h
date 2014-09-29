@@ -21,10 +21,10 @@ public:
 	Field();
 	Field(String designator);
 	virtual ~Field();
-	String getDesignator();
+	String designator();
 	void setDesignator(String designator);
 	virtual void display(ostream& s);
-	int size();
+	virtual int size();
 };
 //-----------------------------------
 Field::Field()
@@ -39,7 +39,7 @@ Field::~Field()
 {
 	//Do nothing
 } //end ~Field
-String Field::getDesignator()
+String Field::designator()
 {
 	return _designator;
 } //end getDesignator
