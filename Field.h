@@ -10,39 +10,40 @@ the parent class of TextField and NumberField.
 
 #include <iostream>
 #include <cstring>
+#include "String.h"
 using namespace std;
 
 class Field{
 	friend ostream& operator << (ostream& s, Field& f);
 private:
-	string _designator; //name of field
+	String _designator; //name of field
 public:
 	Field();
-	Field(string designator);
+	Field(String designator);
 	virtual ~Field();
-	string getDesignator();
-	void setDesignator(string designator);
+	String getDesignator();
+	void setDesignator(String designator);
 	virtual void display(ostream& s);
 	int size();
 };
-
+//-----------------------------------
 Field::Field()
 {
 	_designator = "";
-} //end Field
-Field::Field(string designator)
+} //end default constructor
+Field::Field(String designator)
 {
 	_designator = designator;
-} //end Field
+} //end constructor with designator
 Field::~Field()
 {
-
+	//Do nothing
 } //end ~Field
-string Field::getDesignator()
+String Field::getDesignator()
 {
 	return _designator;
 } //end getDesignator
-void Field::setDesignator(string designator)
+void Field::setDesignator(String designator)
 {
 	_designator = designator;
 } //end setDesignator
@@ -57,13 +58,3 @@ void Field::display(ostream& s)
 } //end display
 
 #endif
-
-
-template <class DataType>
-class AbstractArrayClass
-{
-
-public:
-	virtual int size() const = NULL;
-	virtual DataType& operator[] (int k) = NULL;
-};
