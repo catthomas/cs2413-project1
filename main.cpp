@@ -1,13 +1,17 @@
 #include "ArrayClass.h"
 #include "Vector.h"
 #include "String.h"
+#include "TextField.h"
+#include "BibEntry.h"
 void main()
 {
 	//--------------------------------------------------------ArrayClass testing
 	ArrayClass<int> ai(5, 4);
 	ArrayClass<int> ai2 = ai;
 	ArrayClass<int> ai3(10);
-
+	ArrayClass<TextField> fields;
+	fields = ArrayClass<TextField>(20);
+	cout << fields << endl;
 	cout << ai << endl;
 	cout << ai2 << endl;
 	cout << ai3 << endl; //output varies as ai3 is uninitialized
@@ -55,15 +59,11 @@ void main()
 	}
 
 
-	//------------------------------------------------String class test
-	String s1 = "String1";
-	String s2 = s1;
-	s2[6] = '2';
-	String s3(20);
-	s3 = s1;
-	String s4 = " + ";
-	s3 = s3 + " + " + s2;
-	cout << s1 << ", " << s2 << ", " << s3 << endl;
+	//--------------------------------------------------BibEntry testing
+	BibEntry bib("article", "latilla_hello");
+	TextField test("bob", "42");
+	bib.addField(test);
+	cout << bib << endl;
 
-	while (true){};
+	while (true) {};
 } //end main

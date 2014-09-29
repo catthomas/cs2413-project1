@@ -23,7 +23,7 @@ public:
 	virtual ~TextField();
 	String value();
 	void setValue(String value);
-	int size();
+	int length();
 	void display(ostream& s);
 }; //end TextField class
 
@@ -47,9 +47,9 @@ void TextField::setValue(String value)
 {
 	_value = value;
 } //end setValue
-int TextField::size()
+int TextField::length()
 {
-	return _value.size();
+	return _value.length();
 } //end size
 ostream& operator << (ostream& s, TextField& tf)
 {
@@ -58,7 +58,7 @@ ostream& operator << (ostream& s, TextField& tf)
 } //end <<
 void TextField::display(ostream& s)
 {
-	s << getDesignator() << " = {" << _value << "},";
+	s << designator() << " = {" << _value << "},";
 } //end display
 
 #endif

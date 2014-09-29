@@ -72,7 +72,6 @@
     <ClInclude Include="BibEntry.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Field.h" />
-    <ClInclude Include="NumberField.h" />
     <ClInclude Include="String.h" />
     <ClInclude Include="TextField.h" />
     <ClInclude Include="Vector.h" />

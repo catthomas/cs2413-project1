@@ -39,9 +39,6 @@
     <ClInclude Include="TextField.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NumberField.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Author.h">
       <Filter>Header Files</Filter>
     </ClInclude>

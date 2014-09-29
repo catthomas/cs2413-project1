@@ -24,7 +24,7 @@ public:
 	String designator();
 	void setDesignator(String designator);
 	virtual void display(ostream& s);
-	virtual int size();
+	int length();
 };
 //-----------------------------------
 Field::Field()
