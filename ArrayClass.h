@@ -8,6 +8,7 @@ const int ARRAY_CLASS_DEFAULT_SIZE = 1;
 template <class DataType>
 class ArrayClass : virtual public AbstractArrayClass < DataType >
 {
+friend ostream& operator << (ostream& s, ArrayClass<DataType>& ac);
 protected:
 	DataType* paObject;
 	int _size;
@@ -18,9 +19,10 @@ public:
 	ArrayClass(int n, const DataType& val);
 	ArrayClass(const ArrayClass<DataType>& ac);
 	virtual ~ArrayClass();
-	virutal int size() const;
+	virtual int size() const;
 	virtual DataType& operator[] (int k);
 	void operator= (const ArrayClass<DataType>& ac);
+	void display(ostream& s);
 };
 
 template <class DataType>
@@ -68,6 +70,12 @@ ArrayClass<DataType>::ArrayClass(const ArrayClass<DataType>& ac)
 } //end copy constructor
 
 template <class DataType>
+int ArrayClass<DataType>::size() const
+{
+	return _size;
+} //end size
+
+template <class DataType>
 void ArrayClass<DataType>::copy(const ArrayClass<DataType>& ac)
 {
 	_size = 0; //default in case allocation fails
@@ -89,4 +97,34 @@ void ArrayClass<DataType>::operator= (const ArrayClass<DataType>& ac)
 		copy(ac);
 	}
 } //end overloaded =
+
+template <class DataType>
+DataType& ArrayClass<DataType>::operator[] (int k)
+{
+	if ((k < 0) || (k >= size())) throw ArrayBoundsException();
+	return paObject[k];
+} //end overloaded []
+
+template <class DataType>
+ostream& operator << <DataType>(ostream& s,
+	ArrayClass<DataType>& ac)
+{
+	ac.display(s);
+	return s;
+} //end overloaded <<
+
+template <class DataType>
+void ArrayClass<DataType>::display(ostream& s)
+{
+	s << "[";
+	for (int i = 0; i < ac.size(); i++)
+	{
+		if (i > 0)
+		{
+			s << ',';
+		}
+		s << ac[i];
+	}
+	s << "]";
+} //end display
 #endif

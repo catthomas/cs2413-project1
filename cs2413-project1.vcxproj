@@ -64,6 +64,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbstractArray.h" />
+    <ClInclude Include="AbstractVector.h" />
+    <ClInclude Include="ArrayClass.h" />
+    <ClInclude Include="Exception.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

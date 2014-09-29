@@ -19,25 +19,9 @@ It is the parent class to ArrayClass.s
 template <class DataType>
 class AbstractArrayClass
 {
+
 public: 
-	virutal int size() const = NULL;
+	virtual int size() const = NULL;
 	virtual DataType& operator[] (int k) = NULL;
 };
-
-template <class DataType>
-ostream& operator << <DataType>(ostream& s,
-	AbstractArrayClass<DataType>& ac)
-{
-	s << "[";
-	for (int i = 0; i < ac.size(); i++)
-	{
-		if (i > 0)
-		{
-			s << ',';
-		}
-		s << ac[i];
-	}
-	s << "]";
-	return s;
-} //end overloaded <<
 #endif
