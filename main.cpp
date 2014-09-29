@@ -1,5 +1,6 @@
 #include "ArrayClass.h"
 #include "Vector.h"
+#include "String.h"
 void main()
 {
 	//--------------------------------------------------------ArrayClass testing
@@ -52,6 +53,17 @@ void main()
 		v.remove(i);
 		cout << v << ",cap " << v.capacity() << endl;
 	}
+
+
+	//------------------------------------------------String class test
+	String s1 = "String1";
+	String s2 = s1;
+	s2[6] = '2';
+	String s3(20);
+	s3 = s1;
+	String s4 = " + ";
+	s3 = s3 + " + " + s2;
+	cout << s1 << ", " << s2 << ", " << s3 << endl;
 
 	while (true){};
 } //end main
