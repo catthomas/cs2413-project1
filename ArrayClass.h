@@ -8,7 +8,6 @@ const int ARRAY_CLASS_DEFAULT_SIZE = 1;
 template <class DataType>
 class ArrayClass : virtual public AbstractArrayClass < DataType >
 {
-friend ostream& operator << (ostream& s, ArrayClass<DataType>& ac);
 protected:
 	DataType* paObject;
 	int _size;
@@ -22,7 +21,6 @@ public:
 	virtual int size() const;
 	virtual DataType& operator[] (int k);
 	void operator= (const ArrayClass<DataType>& ac);
-	void display(ostream& s);
 };
 
 template <class DataType>
@@ -104,27 +102,4 @@ DataType& ArrayClass<DataType>::operator[] (int k)
 	if ((k < 0) || (k >= size())) throw ArrayBoundsException();
 	return paObject[k];
 } //end overloaded []
-
-template <class DataType>
-ostream& operator << <DataType>(ostream& s,
-	ArrayClass<DataType>& ac)
-{
-	ac.display(s);
-	return s;
-} //end overloaded <<
-
-template <class DataType>
-void ArrayClass<DataType>::display(ostream& s)
-{
-	s << "[";
-	for (int i = 0; i < ac.size(); i++)
-	{
-		if (i > 0)
-		{
-			s << ',';
-		}
-		s << ac[i];
-	}
-	s << "]";
-} //end display
 #endif

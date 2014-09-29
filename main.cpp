@@ -26,4 +26,6 @@ void main()
 	cout << ai << endl;
 	cout << ai2 << endl;
 	cout << ai3 << endl;
+
+	while (true){};
 } //end main
