@@ -68,6 +68,7 @@
     <ClInclude Include="AbstractVector.h" />
     <ClInclude Include="ArrayClass.h" />
     <ClInclude Include="Exception.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

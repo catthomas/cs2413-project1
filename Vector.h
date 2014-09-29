@@ -183,9 +183,9 @@ void Vector<DataType>::remove(int index)
 	{
 		setCapacity(_size - _incFactor);
 	}
-	for (int i = index; i < _currentSize - 1; i++)
+	for (int i = index; i < _currSize - 1; i++)
 	{
-		(this*)[i] = (*this)[i + 1];
+		(*this)[i] = (*this)[i + 1];
 	}
 	_currSize--;
 } //end remove

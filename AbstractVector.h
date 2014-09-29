@@ -1,7 +1,7 @@
 #ifndef __ABSTRACTVECTOR__H
 #define __ABSTRACTVECTOR__H
 
-#import "AbstractArray.h"
+#include "AbstractArray.h"
 
 /*
 This is the abstract class for a Vector.

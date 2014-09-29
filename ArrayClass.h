@@ -3,14 +3,23 @@
 
 #include "AbstractArray.h"
 
+/*
+This is a generic template for an Array Class
+The code for this class was taken from the book:
+"Data Structures Featuring C++" written by Dr. Sridhar
+Radhakrishnan from the University of Oklahoma.
+
+It is the parent class to Vector.h
+*/
+
 const int ARRAY_CLASS_DEFAULT_SIZE = 1;
 
 template <class DataType>
 class ArrayClass : virtual public AbstractArrayClass < DataType >
 {
 protected:
-	DataType* paObject;
-	int _size;
+	DataType* paObject; //pointer to the array
+	int _size; //size of the array (i.e. capacity)
 	void copy(const ArrayClass<DataType>& ac);
 public:
 	ArrayClass();
