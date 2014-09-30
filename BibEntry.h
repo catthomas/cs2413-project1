@@ -29,7 +29,6 @@ private:
 public:
 	BibEntry();
 	BibEntry(String type, String name);
-	BibEntry(const BibEntry& be);
 	virtual ~BibEntry();
 	String type();
 	String name();
@@ -37,13 +36,15 @@ public:
 	String longestFieldDesignator();
 	int longestFieldLength();
 	int numberOfFields();
+	void setName(String name);
+	void setType(String type);
 	void setNumberOfFields(int numberFields);
 	void setNumberOfAuthors(int numberAuthors);
 	void setLongestFieldDesignator(String longestField);
 	void setLongestFieldLength(int longFieldLength);
 	void addField(TextField field);
 	void display(ostream& s);
-	void operator= (const BibEntry& be);
+	void resetToDefault();
 };
 
 BibEntry::BibEntry()
@@ -98,6 +99,16 @@ int BibEntry::longestFieldLength(){
 	return _longestFieldLength;
 } //end longestFieldLength
 //--------------------------------------------
+void BibEntry::setName(String name)
+{
+	_name = name;
+} //end setName
+//-------------------------------------------
+void BibEntry::setType(String type)
+{
+	_type = type;
+} //end setType
+//---------------------------------------------
 void BibEntry::setNumberOfFields(int numberFields){
 	_numberOfFields = numberFields;
 } //end setNumberOfFields
@@ -151,4 +162,15 @@ void BibEntry::display(ostream& s)
 	 //ending bracket
 	 s << "}" << endl;
 } //end display
+//----------------------------------------------------
+void BibEntry::resetToDefault()
+{
+	_type = "";
+	_name = "";
+	_fields = ArrayClass<TextField>(20); //No more than 20 fields in the bib entry
+	_numberOfFields = 0;
+	_numberOfAuthors = 0;
+	_longestFieldDesignator = "";
+	_longestFieldLength = 0;
+}
 #endif

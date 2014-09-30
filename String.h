@@ -62,22 +62,14 @@ String::~String()
 //-------------------------------------------------
 void String::operator= (const String& str)
 {
-	if (size() == 0) //constructed by default
+	_size = str._size;
+	delete[] paObject;
+	paObject = new char[_size];
+	for (int i = 0; i < (_size - 1); i++)
 	{
-		ArrayClass<char>::operator= (str); //call parent operator
-		return;
+		paObject[i] = str.paObject[i];
 	}
-	//NOTE: length = # of elements
-	int max = str.length(); //not constructed by default
-	bool overflow = false;
-	if (_size - 1 < max)
-	{
-		overflow = true;
-		max = size();
-	}
-	strncpy(paObject, str.paObject, max);
-	paObject[max] = '\0'; //null terminated
-	if (overflow) throw StringSizeException(); //String passed is larger than could be accomodated
+	paObject[(_size - 1)] = '\0';
 } //end overloaded =
 //---------------------------------------------------
 int String::size() const //here size is equivalent to capacity
