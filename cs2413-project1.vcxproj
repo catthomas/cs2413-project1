@@ -81,6 +81,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="ProjectConformantBibFile.bib.txt" />
+    <Text Include="ShortBibFile.bib.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

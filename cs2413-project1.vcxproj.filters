@@ -55,5 +55,8 @@
     <Text Include="ProjectConformantBibFile.bib.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="ShortBibFile.bib.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

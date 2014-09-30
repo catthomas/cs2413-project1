@@ -1,0 +1,62 @@
+@article{lattila_hybrid_2010,
+	title = {Hybrid simulation models {\textendash} When, Why, How?},
+	volume = {37},
+	issn = {09574174},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S0957417410003398},
+	doi = {10.1016/j.eswa.2010.04.039},
+	number = {12},
+	urldate = {2013-06-24},
+	journal = {Expert Systems with Applications},
+	author = {L{\"a}ttil{\"a}, Lauri and Hilletofth, Per and Lin, Bishan},
+	month = {dec},
+	year = {2010},
+	pages = {7969--7975}
+}
+
+@article{grimm_odd_2010,
+	title = {The {ODD} protocol: A review and first update},
+	volume = {221},
+	issn = {03043800},
+	shorttitle = {The {ODD} protocol},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S030438001000414X},
+	doi = {10.1016/j.ecolmodel.2010.08.019},
+	number = {23},
+	urldate = {2013-06-24},
+	journal = {Ecological Modelling},
+	author = {Grimm, Volker and Berger, Uta and DeAngelis, Donald L. and Polhill, J. Gary and Giske, Jarl and Railsback, Steven F.},
+	month = {nov},
+	year = {2010},
+	pages = {2760--2768}
+}
+
+@article{topping_opening_2010,
+	title = {Opening the black box{\textemdash}Development, testing and documentation of a mechanistically rich agent-based model},
+	volume = {221},
+	issn = {03043800},
+	url = {http://linkinghub.elsevier.com/retrieve/pii/S0304380009006346},
+	doi = {10.1016/j.ecolmodel.2009.09.014},
+	number = {2},
+	urldate = {2013-06-24},
+	journal = {Ecological Modelling},
+	author = {Topping, Chris J. and H{\o}ye, Toke T. and Olesen, Carsten Riis},
+	month = {jan},
+	year = {2010},
+	pages = {245--255}
+}
+
+@inproceedings{risi_how_2009-2,
+	address = {New York, {NY}, {USA}},
+	series = {{GECCO} '09},
+	title = {How novelty search escapes the deceptive trap of learning to learn},
+	isbn = {978-1-60558-325-9},
+	url = {http://doi.acm.org/10.1145/1569901.1569923},
+	doi = {10.1145/1569901.1569923},
+	publisher = {{ACM}},
+	urldate = {2013-10-01},
+	abstract = {A major goal for researchers in neuroevolution is to evolve artificial neural networks ({ANNs}) that can learn during their lifetime. Such networks can adapt to changes in their environment that evolution on its own cannot anticipate. However, a profound problem with evolving adaptive systems is that if the impact of learning on the fitness of the agent is only marginal, then evolution is likely to produce individuals that do not exhibit the desired adaptive behavior. Instead, because it is easier at first to improve fitness without evolving the ability to learn, they are likely to exploit domain-dependent static (i.e. non-adaptive) heuristics. This paper proposes a way to escape the deceptive trap of static policies based on the novelty search algorithm, which opens up a new avenue in the evolution of adaptive systems because it can exploit the behavioral difference between learning and non-learning individuals. The main idea in novelty search is to abandon objective-based fitness and instead simply search only for novel behavior, which avoids deception entirely and has shown prior promising results in other domains. This paper shows that novelty search significantly outperforms fitness-based search in a tunably deceptive T-Maze navigation domain because it fosters the emergence of adaptive behavior.},
+	booktitle = {Proceedings of the 11th Annual conference on Genetic and evolutionary computation},
+	author = {Risi, Sebastian and Vanderbleek, Sandy D. and Hughes, Charles E. and Stanley, Kenneth O.},
+	year = {2009},
+	keywords = {adaptation, learning, neat, neural networks, neuroevolution, neuromodulation, novelty search},
+	pages = {153--160}
+}
