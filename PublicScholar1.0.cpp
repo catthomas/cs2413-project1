@@ -30,7 +30,7 @@ int recursiveBinarySearch(Vector<BibEntry>& vec, String& title, int first, int l
 	{
 		mid = (first + last) / 2;
 		midtitle = vec[mid].name();
-		if (title == midtitle) return mid + 1;
+		if (title == midtitle) return mid;
 		else if (midtitle < title)
 			return recursiveBinarySearch(vec, title, mid + 1, last);
 		else return recursiveBinarySearch(vec, title, first, mid);
@@ -249,12 +249,12 @@ void main(){
 				cin >> response;
 				cin.get(); //eats enter
 
-				if (response == 'Y'){
+				if (response == 'Y' || response == 'y'){
 					//Remove entry at index
 					allBibEntries.remove(entryIndex);
 					cout << "Success! The bibliographic entry was removed." << endl;
 				}
-				else if (response == 'N'){
+				else if (response == 'N' || response == 'n'){
 					cout << "The entry was not deleted." << endl;
 				}
 				else{
@@ -271,7 +271,10 @@ void main(){
 			cin.getline(filename, MAX_FILE_NAME_SIZE - 1);
 			
 			if (filename[0] == '\0'){ //user entered nothing, print to console
-				cout << allBibEntries << endl;
+				for (int i = 0; i < allBibEntries.size(); ++i){
+					cout << allBibEntries[i] << endl;
+				}
+				cout << "Number of entries: " << allBibEntries.size() << endl;
 			}
 			else{ //write to file
 				ofstream myfile;

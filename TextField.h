@@ -26,36 +26,70 @@ public:
 	int length();
 	void display(ostream& s);
 }; //end TextField class
-
+//----------------------------------
+/*
+Default constructor for a TextField.
+Sets the field's value to the empty string.
+*/
 TextField::TextField()
 {
-	_value = NULL;
+	_value = "";
 } //end TextField
+//----------------------------------
+/*
+Constructor with parameters for a TextField.
+Takes in two String values: one representing
+the designator, and the other the value.
+*/
 TextField::TextField(String designator, String value) : Field(designator)
 {
 	_value = value;
 } //end TextField
+//----------------------------------
+/*
+Destructor for a TextField
+*/
 TextField::~TextField()
 {
 	//Do nothing
 } //end ~TextField
+//--------------------------------
+/*
+Accessor for the value of a TextField
+*/
 String TextField::value()
 {
 	return _value;
 }//end getalue
+//--------------------------------
+/*
+Mutator for the value of a TextField
+*/
 void TextField::setValue(String value)
 {
 	_value = value;
 } //end setValue
+//-----------------------------
+/*
+Returns the length of the value of TextField.
+*/
 int TextField::length()
 {
 	return _value.length();
 } //end size
+//------------------------------
+/*
+Overloaded ostream operator for a TextField
+*/
 ostream& operator << (ostream& s, TextField& tf)
 {
 	tf.display(s);
 	return s;
 } //end <<
+//--------------------------------------
+/*
+Displays a TextField.s
+*/
 void TextField::display(ostream& s)
 {
 	s << designator() << " = {" << _value << "},";
